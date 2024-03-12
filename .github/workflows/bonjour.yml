@@ -9,11 +9,10 @@ jobs:
     #   options: --user=root
     steps:
       - uses: actions/checkout@v4
-      - name: Read README.md 
-        id: readme
-        uses: juliangruber/read-file-action@v1
+      - uses: juliangruber/read-file-action@v1
+        id: readfile
         with:
           path: ./README.md
-      # - run: sudo apt install cowsay -y
-      # - run: ls -l
-      - run: echo "${{steps.readme.outputs.content}}" | cowsay
+      - uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: "${{ steps.readfile.outputs.content }}"
