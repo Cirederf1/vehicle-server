@@ -1,6 +1,7 @@
 name: Intégration Continue
 on:
   - push
+  - pull_request
 jobs:
   ci:
     runs-on: ubuntu-22.04
