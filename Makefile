@@ -28,7 +28,7 @@ dev:
 
 .PHONY: dev_db
 dev_db:
-  docker container run \
+	docker container run \
 		--detach \
 		--rm \
 		--name=$(DB_CONTAINER_NAME) \
