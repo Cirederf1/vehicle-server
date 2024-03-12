@@ -4,11 +4,16 @@ on:
 jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
-    container:
-      image: ghcr.io/cicd-lectures/gitpod:latest
-      options: --user=root
+    # container:
+    #   image: ghcr.io/cicd-lectures/gitpod:latest
+    #   options: --user=root
     steps:
       - uses: actions/checkout@v4
+      - name: Read README.md 
+        id: readme
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./README.md
       # - run: sudo apt install cowsay -y
       # - run: ls -l
-      - run: cat README.md | cowsay
+      - run: echo "${{steps.readme.outputs.content}}" | cowsay
