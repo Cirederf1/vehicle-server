@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ls -l
-      - run: cat README.md
+      - run: cat README.md | cowsay
