@@ -2,11 +2,14 @@ name: Intégration Continue
 on:
   - push
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
         with:
           go-version-file: './go.mod'
-      - run: make
+      - name: Build application
+        run: make build
