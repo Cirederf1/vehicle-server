@@ -5,6 +5,7 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     steps:
+      - run: sudo apt install cowsay -y
       - uses: actions/checkout@v4
       - run: ls -l
       - run: cat README.md | cowsay
