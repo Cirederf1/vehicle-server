@@ -1,6 +1,6 @@
 package vehicle
 
-import "github.com/cicd-lectures/vehicle-server/pkg/httputil"
+import "github.com/Cirederf1/vehicle-server/pkg/httputil"
 
 func newValidationError(issues []string) error {
 	return &httputil.APIError{

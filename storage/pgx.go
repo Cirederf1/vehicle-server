@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cicd-lectures/vehicle-server/storage/vehiclestore"
+	"github.com/Cirederf1/vehicle-server/storage/vehiclestore"
 	"github.com/jackc/pgx/v5"
 	"go.uber.org/zap"
 )

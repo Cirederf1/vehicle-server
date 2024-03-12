@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/cicd-lectures/vehicle-server/app"
+	"github.com/Cirederf1/vehicle-server/app"
 	"go.uber.org/zap"
 )
 

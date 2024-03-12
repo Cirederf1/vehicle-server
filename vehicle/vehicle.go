@@ -1,6 +1,6 @@
 package vehicle
 
-import "github.com/cicd-lectures/vehicle-server/storage/vehiclestore"
+import "github.com/Cirederf1/vehicle-server/storage/vehiclestore"
 
 type Vehicle struct {
 	Latitude     float64 `json:"latitude"`

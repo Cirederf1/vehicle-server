@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	pkgpgx "github.com/cicd-lectures/vehicle-server/pkg/pgx"
+	pkgpgx "github.com/Cirederf1/vehicle-server/pkg/pgx"
 	geom "github.com/twpayne/go-geom"
 	"github.com/twpayne/go-geom/encoding/ewkbhex"
 )

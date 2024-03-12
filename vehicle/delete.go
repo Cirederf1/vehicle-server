@@ -3,7 +3,7 @@ package vehicle
 import (
 	"net/http"
 
-	"github.com/cicd-lectures/vehicle-server/storage"
+	"github.com/Cirederf1/vehicle-server/storage"
 	"go.uber.org/zap"
 )
 
