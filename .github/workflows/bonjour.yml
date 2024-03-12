@@ -16,3 +16,4 @@ jobs:
       - uses: Code-Hex/neo-cowsay-action@v1
         with:
           message: "${{ steps.readfile.outputs.content }}"
+          cow: 'random'
