@@ -1,5 +1,5 @@
 .PHONY: all
-all: clean dist build
+all: clean dist build package
 
 .PHONY: clean
 clean :
@@ -42,9 +42,15 @@ dev_db:
 stop_dev_db:
 	docker container stop $(DB_CONTAINER_NAME)
 
-.PHONY: unit_test
+.PHONY: unit_test integration_test
 unit_test:
 	go test -v -cover ./...
 integration_test:
 	go test -v -count=1 --tags=integration ./app
 
+
+IMAGE?=	Cirederf1/vehicle-server
+TAG?=dev
+.PHONY: package
+package:
+	docker build -t $(IMAGE):$(TAG) .
