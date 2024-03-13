@@ -49,7 +49,7 @@ integration_test:
 	go test -v -count=1 --tags=integration ./app
 
 
-IMAGE?=	Cirederf1/vehicle-server
+IMAGE?=	cirederf1/vehicle-server
 TAG?=dev
 .PHONY: package
 package:
