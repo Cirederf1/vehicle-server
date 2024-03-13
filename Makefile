@@ -1,5 +1,5 @@
 .PHONY: all
-all: clean dist build package
+all: clean dist build package release
 
 .PHONY: clean
 clean :
@@ -50,7 +50,13 @@ integration_test:
 
 
 IMAGE?=	cirederf1/vehicle-server
-TAG?=dev
+TAG?=1.0.0
 .PHONY: package
 package:
 	docker build -t $(IMAGE):$(TAG) .
+
+.PHONY: release
+release:
+	# git tag $(TAG) -a -m "Release version $(TAG)"
+	# git push origin $(TAG)
+	docker push $(IMAGE):$(TAG)

@@ -19,4 +19,8 @@ jobs:
       - name: Build application
         run: make build
       - name: Test package
-        run: make all
+        run: make package
+      - name: Tag
+        run: make release TAG=${{(github.ref_name}}
+             docker login --username=cirederf1
+        if: startsWith(github.ref, 'refs/tags/')
