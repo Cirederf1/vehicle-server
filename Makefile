@@ -57,6 +57,9 @@ package:
 
 .PHONY: release
 release:
-	# git tag $(TAG) -a -m "Release version $(TAG)"
-	# git push origin $(TAG)
 	docker push $(IMAGE):$(TAG)
+
+.PHONY: docker_push
+docker_push:
+	git tag $(TAG) -a -m "Release version $(TAG)"
+	git push origin $(TAG)
